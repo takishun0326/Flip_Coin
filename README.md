@@ -1,7 +1,23 @@
-# Flip_Coin
-devChallenges. flip the coin
+# 💰 Flip the Coin
+
+A simple web app that simulates flipping a coin.  
+Click the **RANDOM** button or the coin image to see if it's **Heads** or **Tails**.
+
+### 🌐 Live Demo  
+[https://flip-coin-alpha.vercel.app](https://flip-coin-alpha.vercel.app)
 
 
+## 📸 Demo
+
+![Flip the Coin Demo](https://github.com/user-attachments/assets/2a7fd9ef-43ba-4682-9a48-adeed9e81490)
+
+## 📁 Features
+
+- Coin flips randomly between Heads and Tails
+- Smooth image transition
+- Result text updates instantly
+- Responsive design
+- Deployed with [Vercel](https://vercel.com)
 -----
 # DevChallenges.io - Flip The Coin
 

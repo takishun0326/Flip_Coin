@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+
+  <title>Flip the coin | devChallenges.io</title>
+
+  <!--You are welcome to delete these styles or modify them in your own stylesheet -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      margin-top: 20px;
+    }
+
+    body {
+      margin: 60px;
+      height: 100vh;
+      background-color: #434C67;
+      text-align: center;
+      font-family: 'Poppins';
+      font-weight: bold;
+      color: #F8F8FF;
+    }
+
+    button {
+      font-family: 'Poppins';
+      font-weight: bold;
+      color: #F8F8FF;
+      text-align: center;
+    }
+
+    h1 {
+      /* Heading Text Shadow */
+      font-size: 40px;
+      text-shadow: 2px 2px 0px #35383f;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #35383f;
+      /* -webkit-text-fill-color: white; */
+    }
+
+    .flip-button {
+      width: auto;
+      /* padding: 8px 15px; */
+      padding: 12px 30px;
+      margin: 30px;
+
+      /* Button Shadow */
+      box-shadow: 0px 4px 0px 0px #23649b;
+      border-radius: 10px;
+      background-color: #1E76BD;
+      border: none;
+      cursor: pointer;
+    }
+
+    .flip-button:hover {
+      background-color: #2a82ca;
+    }
+
+    .flip-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #165a90;
+    }
+
+    .author-info {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 16px;
+      /* color: rgb(55, 65, 81); */
+      color: #DCDCDC;
+    }
+
+    .author-info a {
+      text-decoration: none;
+      color: #91C8F6
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>
+    Flip the coin
+  </h1>
+
+  <p>
+    Press the coin or the button to flip the coin
+  </p>
+
+  <div>
+    <img id="coin" src="resources/heads.svg">
+  </div>
+  <div>
+    <img src="resources/shadow.svg">
+  </div>
+  <div id="result"> Heads</div>
+
+  <button id="flipcoin" class="button flip-button">RANDOM</button>
+
+
+  <div class="author-info">
+    Coded by <a href="#">takishun</a> | Challenge by
+    <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
+  </div>
+</body>
+
+</html>
+
+<script>
+  document.getElementById("flipcoin").addEventListener("click", () => {
+    const result = Math.random() < 0.5 ? "Heads" : "Tails";
+    const coin = document.getElementById("coin")
+    document.getElementById("result").textContent = result
+
+    if (result == "Heads") {
+      coin.src = "resources/heads.svg"
+    } else if (result == "Tails") {
+      coin.src = "resources/tails.svg"
+    }
+  })
+</script>
